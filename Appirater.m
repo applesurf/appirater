@@ -144,11 +144,11 @@ static id<AppiraterDelegate> _delegate;
 }
 
 - (void)showRatingAlert {
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:APPIRATER_MESSAGE_TITLE
-														 message:APPIRATER_MESSAGE
-														delegate:self
-											   cancelButtonTitle:APPIRATER_CANCEL_BUTTON
-											   otherButtonTitles:APPIRATER_RATE_BUTTON, APPIRATER_RATE_LATER, nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"app_rating_title", nil)
+                                                        message:NSLocalizedString(@"app_rating_message", nil)
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"app_rating_no", nil)
+                                              otherButtonTitles:NSLocalizedString(@"app_rating_yes", nil), NSLocalizedString(@"app_rating_maybe", nil), nil];
 	self.ratingAlert = alertView;
 	[alertView show];
 	
